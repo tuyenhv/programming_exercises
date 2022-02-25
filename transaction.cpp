@@ -25,16 +25,24 @@ bool compareTransactionIds(Transaction t1, Transaction t2) {
 bool hadDuplicateIds(vector<Transaction> v){
     sort(v.begin(), v.end(), compareTransactionIds);
     int size = v.size();
-    for(int i = 0; i < size-1; ++i){
+    for (int i = 0; i < size-1; ++i) {
         if(v[i].id == v[++i].id)
             return true;
     }
     return false;
 }
 
+void findDuplicateIds(vector<Transaction> allTransaction, vector<Transaction> duplicateTransaction){
+    sort(allTransaction.begin(), allTransaction.end(), compareTransactionIds);
+    int size = v.size();
+    for (int i = 0; i < size - 1; ++i) {
+        if(allTransaction[i].)
+    } 
+}
+
 int main()
 {
-    vector<Transaction> t {{2,"tuyen"},{3,"thang"},{1,"dat"},{3,"quan"}};
+    vector<Transaction> t {{2,"tuyen"},{3,"thang"},{1,"dat"},{8,"quan"}};
     
     if(hadDuplicateIds(t)){
         cout << "have Duplicate Ids";
